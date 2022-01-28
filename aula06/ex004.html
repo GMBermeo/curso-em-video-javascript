@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: lighter 30pt Helvetica;
+            background-color: black;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>BOLSA DE VALORES</h1>
+
+    <script>
+        var nome = window.prompt("Qual é o seu nome?");
+        var nomePreco = (nome.length - Math.random() - Math.random()).toFixed(2);
+        document.write(`Olá <b>${nome}</b>! Seu nome tem ${nome.length} letras.<br>`);
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`);
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}<br><br>`);
+        document.write(`Seu nome tá valendo <b>${((nomePreco * 1).toLocaleString('pr-BR', {style: 'currency', currency: 'BRL'})).replace('.', ',')}</b> ou <b>${((nomePreco/5.53)).toLocaleString('pr-BR', {style: 'currency', currency: 'USD'})}</b>`); 
+    </script>
+</body>
+</html>

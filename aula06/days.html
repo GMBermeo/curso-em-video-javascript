@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: lighter 30pt Helvetica;
+            background-color: black;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: left;
+            margin-left: 2.5%;
+            z-index: 999;
+        }
+
+        h2 {
+            margin-bottom: -40px;
+            font: lighter;
+        }
+
+        h3 {
+            font: medium;
+            font-size: 1em;
+        }
+
+        .sec,
+        .min,
+        .hour,
+        .day,
+        .week,
+        .month,
+        .year,
+        .dec,
+        .cen {
+            margin-bottom: 0.75em;
+        }
+
+        .sec {
+            opacity: 20%;
+        }
+
+        .min {
+            opacity: 30%;
+        }
+
+        .hour {
+            opacity: 40%;
+        }
+
+        .day {
+            opacity: 50%;
+        }
+
+        .week {
+            opacity: 60%;
+        }
+
+        .month {
+            opacity: 70%;
+        }
+
+        .year {
+            opacity: 80%;
+        }
+
+        .dec {
+            opacity: 90%;
+        }
+        svg {
+            z-index: 1;
+            height: 90%;
+            align-self: right;           
+        }
+        body{
+            background-image: url(/Users/gmbermeo/Documents/dev/CursoJs/aula06/h&s.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom right;
+        z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>$1/s</h1>
+
+    <script>
+        var dol = 5.57;
+        var grana = dol * 68700000000;
+        var sec = grana / 60;
+        var min = sec / 60;
+        var hour = min / 60;
+        var day = hour / 24;
+        var week = day / 5;
+        var month = day / 30;
+        var year = month / 12;
+        var dec = year / 10;
+        var cen = dec / 10;
+
+        // document.write(`<h2><b>R$ ${(grana * 1).toLocaleString('de-DE', {style: 'decimal', maximumFractionDigits : 2})}</b></h2> <h3>ou <b>${((grana/dol)).toLocaleString('pr-BR', {style: 'currency', currency: 'USD'})}</h3> </b>`);
+
+        document.write(`<div class="cen">${(cen).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} séculos.</div>`);
+        document.write(`<div class="dec">${(dec).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} décadas.</div>`);
+        document.write(`<div class="year">${(year).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} anos.</div>`);
+        document.write(`<div class="month">${(month).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} meses.</div>`);
+        document.write(`<div class="week">${(week).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} semanas.</div>`);
+        document.write(`<div class="day">${(day).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} dias.</div>`);
+        document.write(`<div class="hour">${(hour).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} horas.</div>`);
+        document.write(`<div class="min">${(min).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} minutos.</div>`);
+        document.write(`<div class="sec">${(sec).toLocaleString('de-DE', { style: 'decimal', maximumFractionDigits: 2 })} segundos.</div>`);
+    </script>
+</body>
+
+</html>

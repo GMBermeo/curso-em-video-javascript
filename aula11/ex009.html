@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que país é esse????</title>
+    <style>
+        body {
+            text-align: center;
+            background: #333;
+            color: white;
+            font: lighter 1.3em Helvetica;
+        }
+        input, button {
+            font: bold 1.3em Helvetica;
+            width: 15%;
+        }
+        h1 {
+            font: lighter 4em Helvetica;
+            margin-bottom: 1em;
+        }
+    
+        #res {
+            margin-top: 0.71em;
+            font: lighter 2em Helvetica;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Que país é esse????</h1>
+    <input type="text" id="text">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar(){
+        var país = window.document.querySelector('input#text');
+        var res = window.document.querySelector('div#res');
+        var paísString = String(país.value);
+
+        if (paísString == 'Brasil'){
+            res.innerHTML = '<p>Você é <b>Brasileiro!<b></p>'
+        } else {
+            res.innerHTML = '<p>Você é <b>Estrangeiro</b>!</p>'
+        }
+    }
+    </script>
+</body>
+</html>

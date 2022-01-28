@@ -1,0 +1,40 @@
+body {
+    background: rgb(78, 175, 255);
+    font: normal 15pt Helvetica;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+div{
+    padding: 10px;
+    
+}
+img {
+    margin: auto;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 100%;
+    aspect-ratio: 1 /1;
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 9%;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
